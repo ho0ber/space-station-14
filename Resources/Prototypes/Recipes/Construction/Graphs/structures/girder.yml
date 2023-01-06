@@ -47,13 +47,16 @@
 
         - to: falseWall
           completed:
+            - !type:SetAnchor
+              value: true
             - !type:SnapToGrid
               southRotation: true
           conditions:
-            - !type:EntityAnchored {}
+            - !type:EntityAnchored
+              anchored: false
           steps:
-            - material: MetalRod
-              amount: 4
+            - material: Steel
+              amount: 2
               doAfter: 2
 
         - to: reinforcedGirder
@@ -326,8 +329,12 @@
       edges:
         - to: girder
           completed:
+            - !type:SetAnchor
+              value: false
+            - !type:SnapToGrid
+              southRotation: true
             - !type:GivePrototype
-              prototype: PartRodMetal1
+              prototype: SheetSteel1
               amount: 2
           steps:
             - tool: Welding

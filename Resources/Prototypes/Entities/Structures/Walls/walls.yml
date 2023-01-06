@@ -714,6 +714,9 @@
       - RCDDeconstructWhitelist
   - type: Sprite
     sprite: Structures/Walls/solid.rsi
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
   - type: Construction
     graph: Girder
     node: wall
@@ -751,6 +754,13 @@
     closeSound:
       path: /Audio/Misc/zip.ogg
     bumpOpen: false
+  - type: Appearance
+    visuals:
+      - type: AirlockVisualizer
+        simpleVisuals: true
+        animationTime: 1.2
+  - type: Airtight
+    fixVacuum: true
 
 - type: entity
   parent: BaseWall
