@@ -45,6 +45,17 @@
               amount: 2
               doAfter: 2
 
+        - to: trickWall
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: MetalRod
+              amount: 4
+              doAfter: 2
+
         - to: reinforcedGirder
           completed:
             - !type:SnapToGrid
@@ -309,3 +320,15 @@
           steps:
             - tool: Welding
               doAfter: 5
+
+    - node: trickWall
+      entity: TrickWall
+      edges:
+        - to: girder
+          completed:
+            - !type:GivePrototype
+              prototype: PartRodMetal1
+              amount: 2
+          steps:
+            - tool: Welding
+              doAfter: 10
