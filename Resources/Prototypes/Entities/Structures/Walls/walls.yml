@@ -704,7 +704,7 @@
 
 - type: entity
   parent: BaseWall
-  id: TrickWall
+  id: FalseWall
   name: solid* wall
   description: A perfectly normal wall.
   components:

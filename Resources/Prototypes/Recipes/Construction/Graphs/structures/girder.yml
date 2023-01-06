@@ -45,7 +45,7 @@
               amount: 2
               doAfter: 2
 
-        - to: trickWall
+        - to: falseWall
           completed:
             - !type:SnapToGrid
               southRotation: true
@@ -321,8 +321,8 @@
             - tool: Welding
               doAfter: 5
 
-    - node: trickWall
-      entity: TrickWall
+    - node: falseWall
+      entity: FalseWall
       edges:
         - to: girder
           completed:
